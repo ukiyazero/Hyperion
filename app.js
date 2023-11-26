@@ -25,7 +25,7 @@ function sanitize(value) {
 function format(value) {
   let splitter = value.toString().split('.');
   splitter[0] = splitter[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return `â‚± ${splitter.join('.')}`;
+  return `₱ ${splitter.join('.')}`;
 }
 
 function compute() {
@@ -43,7 +43,7 @@ function compute() {
 
   if (taxableIncome <= 20833) {
 
-    incomeTax.value = `â‚± 0 - ${"Tax Exempted"}`;
+    incomeTax.value = `₱ 0 - ${"Tax Exempted"}`;
     salaryAfterTax.value = format((salary.value - sanitize(incomeTax.value)).toFixed(2));
 
   } else if (taxableIncome >= 20833 && taxableIncome <= 33332) {
