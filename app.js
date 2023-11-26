@@ -43,7 +43,7 @@ function compute() {
 
   if (taxableIncome <= 20833) {
 
-    incomeTax.value = `â‚± 0 - ${"Tax Exempted"}`;
+    incomeTax.value = PHP - ${"Tax Exempted"}`;
     salaryAfterTax.value = format((salary.value - sanitize(incomeTax.value)).toFixed(2));
 
   } else if (taxableIncome >= 20833 && taxableIncome <= 33332) {
